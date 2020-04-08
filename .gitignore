@@ -1,0 +1,5 @@
+node_modules
+public
+resources
+data/webpack.json
+yarn-error.log

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <title>{{if ne .Page.Title .Site.Title }}{{ .Page.Title }} - {{ end }}{{ .Site.Title }}</title>
+
+    <link rel="preload" as="font" href="fonts/quicksand-latin-400.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="fonts/raleway-latin-400.woff2" type="font/woff2" crossorigin="anonymous">
+
+    {{ with .Site.Data.webpack.main.css }}
+      <link rel="stylesheet" href="{{ . }}">
+    {{ end }}
+  </head>
+  <body class="font-body">
+    {{ block "main" . }}{{ end }}
+
+    {{ with .Site.Data.webpack.main.js }}
+      <script src="{{ . }}" charset="utf-8"></script>
+    {{ end }}
+  </body>
+</html>
