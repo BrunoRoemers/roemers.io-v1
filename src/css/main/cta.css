@@ -1,0 +1,33 @@
+.cta {
+  @apply block w-full text-left;
+}
+
+.cta:hover {
+  @apply cursor-pointer;
+}
+
+.cta::after {
+  /* line under CTA */
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+}
+
+.cta-on-white {
+  @apply text-cta-on-white;
+}
+
+.cta-on-white::after {
+  /* line under CTA */
+  @apply bg-cta-on-white;
+}
+
+.cta-on-black {
+  @apply text-cta-on-black;
+}
+
+.cta-on-black::after {
+  /* line under CTA */
+  @apply bg-cta-on-black;
+}

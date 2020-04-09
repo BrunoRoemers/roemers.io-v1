@@ -1,3 +1,71 @@
 {{ define "main" }}
-  list template
+  <section class="px-20">
+    <div class="mx-auto max-w-screen-xl mt-32">
+      <h1 class="font-heading text-heading text-white-main w-6/12 leading-tight">
+        Hi I'm Bruno
+      </h1>
+      <div class="flex flex-wrap line-split px-14">
+        <div class="w-6/12 text-white-main"></div>
+        <div class="w-6/12 pl-14 mt-12">
+          <p class="text-justify -mr-14">
+            <span class="small-caps">
+              I built this page to challenge myself.
+            </span>
+            See, I have been coding since I was young,
+            but never took the time to share that
+            passion with the world. This page marks
+            a change: for the coming weeks I will be
+            brushing up my front-end skills and keep
+            you posted on the journey.
+            <a href="#">
+              This is why...
+            </a> #1week1page
+          </p>
+          {{ partial "cta_header" . }}
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="px-20">
+    <div class="mx-auto max-w-screen-xl mt-22">
+      <h1 class="font-heading text-heading text-right text-black-main ml-6/12 w-6/12 leading-tight">
+        Card Game
+      </h1>
+      <div class="flex flex-wrap line-split px-14">
+        <div class="w-6/12 text-white-main pr-14 mt-12">
+          <p class="text-justify -ml-14">
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis
+            nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo consequat.
+          </p>
+          {{ $cta := (dict "bg" "black" "link" "#" "text" "This trick balanced the design") }}
+          {{ partial "cta_link" $cta }}
+        </div>
+        <div class="w-6/12"></div>
+      </div>
+    </div>
+  </section>
+  <section class="px-20">
+    <div class="mx-auto max-w-screen-xl mt-22">
+      <h1 class="font-heading text-heading text-white-main w-6/12 leading-tight">
+        Roemers.io
+      </h1>
+      <div class="flex flex-wrap line-split px-14">
+        <div class="w-6/12 text-white-main"></div>
+        <div class="w-6/12 pl-14 mt-12">
+          <p class="text-justify -mr-14">
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis
+            nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo consequat.
+          </p>
+          {{ $cta := (dict "bg" "white" "link" "#" "text" "This is how I started") }}
+          {{ partial "cta_link" $cta }}
+        </div>
+      </div>
+    </div>
+  </section>
 {{ end }}

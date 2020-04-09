@@ -22,6 +22,10 @@ module.exports = {
           publicPath: '/',
         },
       },
+      {
+        test: /\.svg$/i,
+        loader: 'svg-url-loader',
+      },
     ],
   },
   plugins: [

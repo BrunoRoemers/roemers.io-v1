@@ -1,0 +1,17 @@
+<footer class="line-split mt-32">
+  <div class="px-20 py-14 mx-auto max-w-screen-xl flex">
+    <div class="w-6/12 px-14 text-white-main">
+      {{ partial "cta_footer" . }}
+    </div>
+    <div class="w-6/12 px-14">
+      {{ $instagram := (dict "link" "https://instagram.com/brunoroemers/" "label" "Instagram" "icon" "fa-instagram") }}
+      {{ partial "footer_social_link" $instagram }}
+
+      {{ $linkedin := (dict "link" "https://linkedin.com/in/bruno-roemers" "label" "LinkedIn" "icon" "fa-linkedin") }}
+      {{ partial "footer_social_link" $linkedin }}
+
+      {{ $twitter := (dict "link" "https://twitter.com/BrunoRoemers" "label" "Twitter" "icon" "fa-twitter") }}
+      {{ partial "footer_social_link" $twitter }}
+    </div>
+  </div>
+</footer>

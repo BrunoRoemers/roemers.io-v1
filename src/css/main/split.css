@@ -1,0 +1,25 @@
+@responsive {
+  .bg-split {
+    background: linear-gradient(
+      90deg,
+      theme('colors.black-main'),
+      theme('colors.black-main') 50%,
+      theme('colors.white-main') 50%,
+      theme('colors.white-main') 100%
+    );
+  }
+
+  .line-split::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(
+      90deg,
+      theme('colors.white-main'),
+      theme('colors.white-main') 50%,
+      theme('colors.black-main') 50%,
+      theme('colors.black-main') 100%
+    );
+  }
+}

@@ -15,9 +15,14 @@
     {{ with .Site.Data.webpack.main.js }}
       <script async src="{{ . }}" charset="utf-8"></script>
     {{ end }}
+
     {{ template "_internal/google_analytics_async.html" . }}
   </head>
-  <body class="font-body">
+  <body class="font-body bg-split">
     {{ block "main" . }}{{ end }}
+
+    {{ block "footer" . }}
+      {{ partial "footer" . }}
+    {{ end }}
   </body>
 </html>

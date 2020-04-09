@@ -1,7 +1,23 @@
 /* main entrypoint for css */
 
+/* BASE STYLES */
 /* purgecss start ignore */
-@import "tailwindcss/base";
+@import "main/base.css";
+/* purgecss end ignore */
+
+/* COMPONENTS */
+/* purgecss start ignore */
 @import "tailwindcss/components";
 /* purgecss end ignore */
+
+/* UTILITIES */
 @import "tailwindcss/utilities";
+@import "main/fontawesome.css";
+@import "main/cta.css";
+@import "main/split.css";
+
+@responsive {
+  .small-caps {
+    font-variant: small-caps;
+  }
+}

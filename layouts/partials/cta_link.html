@@ -1,0 +1,22 @@
+{{/*
+  CONTEXT
+  .bg: black or white
+  .link: href of anchor
+  .text
+*/}}
+
+{{ if eq .bg "black"  }}
+<a href="{{ .link }}" class="no-default cta cta-on-black mt-12">
+  {{ .text }}
+  <div class="float-right mt-3px">
+    <span aria-hidden="true" class="fa fa-link fa-cta-on-black"></span>
+  </div>
+</a>
+{{ else if eq .bg "white"}}
+<a href="{{ .link }}" class="no-default cta cta-on-white mt-12">
+  {{ .text }}
+  <div class="float-right mt-3px">
+    <span aria-hidden="true" class="fa fa-link fa-cta-on-white"></span>
+  </div>
+</a>
+{{ end }}

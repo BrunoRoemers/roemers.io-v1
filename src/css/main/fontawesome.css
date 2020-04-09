@@ -1,0 +1,51 @@
+.fa {
+  display: inline-block;
+  width: theme('fontSize.base');
+}
+
+/* pick color filter: https://codepen.io/sosuke/pen/Pjoqqp */
+
+@variants hover, focus {
+  .fa-cta-on-white {
+    filter: invert(24%) sepia(68%) saturate(7396%) hue-rotate(347deg) brightness(90%) contrast(106%);
+  }
+
+  .fa-cta-on-black {
+    filter: invert(71%) sepia(43%) saturate(7341%) hue-rotate(319deg) brightness(97%) contrast(93%);
+  }
+}
+
+
+/* NOTE: text-indent only works with ::after */
+.fa::after {
+  content: '';
+  display: block;
+  padding-bottom: 100%; /* height = width */
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.fa-pencil::after {
+  background-image: url('~@fortawesome/fontawesome-free/svgs/solid/pencil-alt.svg')
+}
+
+.fa-link::after {
+  background-image: url('~@fortawesome/fontawesome-free/svgs/solid/link.svg')
+}
+
+.fa-github::after {
+  background-image: url('~@fortawesome/fontawesome-free/svgs/brands/github.svg')
+}
+
+.fa-instagram::after {
+  background-image: url('~@fortawesome/fontawesome-free/svgs/brands/instagram.svg')
+}
+
+.fa-linkedin::after {
+  background-image: url('~@fortawesome/fontawesome-free/svgs/brands/linkedin.svg')
+}
+
+.fa-twitter::after {
+  background-image: url('~@fortawesome/fontawesome-free/svgs/brands/twitter.svg')
+}

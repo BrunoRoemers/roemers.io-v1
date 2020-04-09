@@ -1,0 +1,21 @@
+@import "tailwindcss/base";
+
+body {
+  font-size: 20px;
+}
+
+a {
+  @apply text-blue-main;
+}
+
+a:hover, a:focus {
+  @apply underline;
+}
+
+.no-default {
+  color: inherit;
+}
+
+.no-default:hover, .no-default:focus {
+  @apply no-underline;
+}

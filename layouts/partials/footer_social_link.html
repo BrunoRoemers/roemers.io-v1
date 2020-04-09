@@ -1,0 +1,21 @@
+{{/*
+  CONTEXT
+  .link
+  .label
+  .icon
+*/}}
+<a
+  target="_blank"
+  rel="noopener noreferrer"
+  href="{{ .link }}"
+  aria-label="{{ .label }}"
+  class="
+    no-default
+    hover:fa-cta-on-white
+    focus:fa-cta-on-white
+    mr-4
+    inline-block
+  "
+>
+  <span class="fa {{ .icon }} w-6 align-middle"></span>
+</a>

@@ -15,6 +15,7 @@
     "serve": "serve ./public"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
     "assets-webpack-plugin": "^3.9.12",
     "autoprefixer": "^9.7.6",
     "clean-webpack-plugin": "^3.0.0",
@@ -25,6 +26,7 @@
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-loader": "^3.0.0",
     "purgecss-webpack-plugin": "^2.1.2",
+    "svg-url-loader": "^5.0.0",
     "tailwindcss": "^1.2.0",
     "terser-webpack-plugin": "^2.3.5",
     "typeface-quicksand": "^1.1.4",
