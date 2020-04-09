@@ -44,6 +44,7 @@ module.exports = merge(baseConfig, {
     new PurgecssPlugin({
       // scan layouts folder for used css
       paths: glob.sync(`layouts/**/*`,  { nodir: true }),
+      defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
     }),
   ],
 })
