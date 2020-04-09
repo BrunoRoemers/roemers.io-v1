@@ -11,12 +11,13 @@
     {{ with .Site.Data.webpack.main.css }}
       <link rel="stylesheet" href="{{ . }}">
     {{ end }}
+
+    {{ with .Site.Data.webpack.main.js }}
+      <script async src="{{ . }}" charset="utf-8"></script>
+    {{ end }}
+    {{ template "_internal/google_analytics_async.html" . }}
   </head>
   <body class="font-body">
     {{ block "main" . }}{{ end }}
-
-    {{ with .Site.Data.webpack.main.js }}
-      <script src="{{ . }}" charset="utf-8"></script>
-    {{ end }}
   </body>
 </html>

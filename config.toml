@@ -1,3 +1,4 @@
 baseURL = "https://roemers.io/"
 languageCode = "en-us"
 title = "Bruno Roemers Portfolio"
+GoogleAnalytics = 'UA-163268784-1'
