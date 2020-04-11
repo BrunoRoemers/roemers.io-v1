@@ -21,6 +21,7 @@ module.exports = merge(baseConfig, {
   module: {
     rules: [
       {
+        // css @ production
         test: /\.css$/,
         use: [
           MiniCssExtractPlugin.loader,

@@ -16,6 +16,7 @@ module.exports = merge(baseConfig, {
   module: {
     rules: [
       {
+        // css @ dev
         test: /\.css$/,
         use: [
           'style-loader',

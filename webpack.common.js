@@ -24,6 +24,7 @@ module.exports = {
   module: {
     rules: [
       {
+        // fonts
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         loader: 'file-loader',
         options: {
@@ -32,23 +33,28 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|jpg|gif)$/,
+        // src/images
+        test: /src\/images\/.+\.(svg|png|jpg|gif)$/,
         loader: 'file-loader',
         options: {
-          name: 'images/[name].[ext]',
+          name: '[path]/[name].[ext]',
+          context: 'src', // [path] in name is relative to this folder
+          publicPath: '/',
         },
       },
       {
-        test: /\.svg$/i,
+        // fontawesome icons
+        test: /fontawesome-free\/.+\.svg$/i,
         use: [
           {
             loader: 'svg-url-loader',
             options: {
-              limit: 2048, // 2kb
+              limit: 1, // 2kb
               fallback: 'file-loader',
 
               // options for fallback
-              name: 'images/[name].[ext]',
+              name: 'icons/[name].[ext]',
+              publicPath: '/',
             },
           },
         ],
