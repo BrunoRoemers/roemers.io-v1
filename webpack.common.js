@@ -49,7 +49,7 @@ module.exports = {
           {
             loader: 'svg-url-loader',
             options: {
-              limit: 1, // 2kb
+              limit: 2048, // 2kb
               fallback: 'file-loader',
 
               // options for fallback
