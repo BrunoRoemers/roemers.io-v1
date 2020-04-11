@@ -1,0 +1,13 @@
+{{/*
+    Make sure that parent has position: relative
+
+    CONTEXT
+    .bg
+    .src
+    .alt
+*/}}
+{{ $class := cond (eq .bg "white") "pl-14" "pb-1 pr-14" }}
+{{ $imgClass := cond (eq .bg "white") "shadow-on-white" "shadow-on-black" }}
+<div class="absolute top-0 right-0 bottom-0 left-0 pt-2 {{ $class }}">
+    <img class="object-cover w-full h-full {{ $imgClass }}" src="{{ .src }}" alt="{{ .alt }}">
+</div>

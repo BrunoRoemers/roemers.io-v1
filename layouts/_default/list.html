@@ -1,11 +1,12 @@
 {{ define "main" }}
-  <section class="px-20">
-    <div class="mx-auto max-w-screen-xl mt-32">
+  <section class="px-20 bg-header">
+    <div class="mx-auto max-w-screen-xl pt-32 pb-22">
       <h1 class="font-heading text-heading text-white-main w-6/12 leading-tight">
         Hi I'm Bruno
       </h1>
       <div class="flex flex-wrap line-split px-14">
-        <div class="w-6/12 text-white-main"></div>
+        <div class="w-6/12 text-white-main mt-12">
+        </div>
         <div class="w-6/12 pl-14 mt-12">
           <p class="text-justify -mr-14">
             <span class="small-caps">
@@ -27,7 +28,7 @@
     </div>
   </section>
   <section class="px-20">
-    <div class="mx-auto max-w-screen-xl mt-22">
+    <div class="mx-auto max-w-screen-xl mb-22">
       <h1 class="font-heading text-heading text-right text-black-main ml-6/12 w-6/12 leading-tight">
         Card Game
       </h1>
@@ -43,24 +44,32 @@
           {{ $cta := (dict "bg" "black" "link" "#" "text" "This trick balanced the design") }}
           {{ partial "cta_link" $cta }}
         </div>
-        <div class="w-6/12"></div>
+        <div class="w-6/12 mt-12 relative">
+                    {{ partial "list_image" (dict "bg" "white" "src" "https://unsplash.it/500/500" "alt" "test image" ) }}
+                    <!-- {{ partial "list_image" (dict "bg" "white" "src" "https://unsplash.it/id/130/500/500" "alt" "test image" ) }} -->
+        </div>
       </div>
     </div>
   </section>
   <section class="px-20">
-    <div class="mx-auto max-w-screen-xl mt-22">
+    <div class="mx-auto max-w-screen-xl mb-22">
       <h1 class="font-heading text-heading text-white-main w-6/12 leading-tight">
         Roemers.io
       </h1>
       <div class="flex flex-wrap line-split px-14">
-        <div class="w-6/12 text-white-main"></div>
+        <div class="w-6/12 text-white-main mt-12 relative">
+                    {{ partial "list_image" (dict "bg" "black" "src" "https://unsplash.it/500/500" "alt" "test image" ) }}
+                    <!-- {{ partial "list_image" (dict "bg" "black" "src" "https://unsplash.it/id/120/500/500" "alt" "test image" ) }} -->
+        </div>
         <div class="w-6/12 pl-14 mt-12">
           <p class="text-justify -mr-14">
             Lorem ipsum dolor sit amet, consectetur adipisicing
             elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Ut enim ad minim veniam, quis
             nostrud exercitation ullamco laboris nisi ut aliquip
-            ex ea commodo consequat.
+            ex ea commodo consequat. Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.
           </p>
           {{ $cta := (dict "bg" "white" "link" "#" "text" "This is how I started") }}
           {{ partial "cta_link" $cta }}
