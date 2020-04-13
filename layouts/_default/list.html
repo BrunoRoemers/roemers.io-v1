@@ -1,11 +1,11 @@
 {{ define "main" }}
-  <header class="px-6 xl:px-20 relative">
+  <header class="px-6 xl:px-20 relative scroll-nudge">
     <div class="max-w-screen-sm xl:max-w-screen-xxl mx-auto pt-24 pb-20 xl:pb-32">
       <h1 class="font-heading text-5xl md:text-heading-md xl:text-heading xl:text-white-main leading-tight text-center xl:text-left xl:w-6/12">
         Hi I'm Bruno
       </h1>
       <!-- line -->
-      <div class="line-black line-absolute xl:line-static xl:line-both xl:flex xl:flex-wrap xl:mx-14">
+      <div class="line-black-6/12 line-absolute xl:line-static xl:line-both-6/12 xl:flex xl:flex-wrap xl:mx-14">
         <div class="xl:w-6/12 xl:mt-12">
           <!-- image -->
           {{ $divClass := "xl:pr-remove xl:right-auto xl:w-6/12 xl:filter-header" }}
@@ -27,7 +27,16 @@
               This is why...
             </a> #1week1page
           </p>
-          {{ partial "cta_header" . }}
+
+          <!-- CTA HEADER -->
+          <button type="button"
+            class="flex justify-between items-center w-full text-red-cta-on-white mt-12  border-solid border-b border-red-icon-on-white"
+            data-inactive>
+            <span class="">Wish me luck!</span>
+            <span class="w-icon mt-1 text-red-icon-on-white">
+              {{ partial "icon" (dict "icon" "solid/pencil-alt.svg") }}
+            </span>
+          </button>
         </div>
       </div>
     </div>
@@ -37,11 +46,11 @@
 
   <section class="px-6 xl:px-20 relative text-white-main">
     <div class="max-w-screen-sm xl:max-w-screen-xxl mx-auto pt-15 xl:pt-0 pb-20 xl:pb-32">
-      <h1 class="font-heading text-5xl md:text-heading-md xl:text-heading xl:text-black-main leading-tight text-center xl:text-right pb-4px">
+      <h2 class="font-heading text-5xl md:text-heading-md xl:text-heading xl:text-black-main leading-tight text-center xl:text-right pb-4px">
         Card Game
-      </h1>
+      </h2>
       <!-- line -->
-      <div class="line-white line-absolute xl:line-static xl:line-both xl:flex xl:flex-wrap xl:mx-14">
+      <div class="line-white-6/12 line-absolute xl:line-static xl:line-both-6/12 xl:flex xl:flex-wrap xl:mx-14">
         <div class="xl:w-6/12 xl:pr-14">
           <p class="text-justify mt-12 xl:mt-12 xl:-ml-14">
             Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -50,12 +59,12 @@
             nostrud exercitation ullamco laboris nisi ut aliquip
             ex ea commodo consequat.
           </p>
-          {{ $cta := (dict "bg" "black" "link" "#" "text" "This trick balanced the design") }}
+          {{ $cta := (dict "bg" "black" "link" "/test" "text" "This trick balanced the design") }}
           {{ partial "cta_link" $cta }}
         </div>
         <div class="xl:w-6/12 xl:relative xl:mt-12">
           <!-- image -->
-          {{ partial "list_image" (dict "bg" "white" "src" "https://unsplash.it/500/500" "alt" "test image" ) }}
+          {{ partial "list_image" (dict "bg" "white" "src" "https://unsplash.it/id/413/500/500" "alt" "test image" ) }}
           <!-- {{ partial "list_image" (dict "bg" "white" "src" "https://unsplash.it/id/130/500/500" "alt" "test image" ) }} -->
         </div>
       </div>
@@ -66,14 +75,14 @@
 
   <section class="px-6 xl:px-20 relative">
     <div class="max-w-screen-sm xl:max-w-screen-xxl mx-auto pt-15 xl:pt-0 pb-20 xl:pb-32">
-      <h1 class="font-heading text-5xl md:text-heading-md xl:text-heading xl:text-white-main leading-tight text-center xl:text-left">
+      <h2 class="font-heading text-5xl md:text-heading-md xl:text-heading xl:text-white-main leading-tight text-center xl:text-left">
         Roemers.io
-      </h1>
+      </h2>
       <!-- line -->
-      <div class="line-black line-absolute xl:line-static xl:line-both xl:flex xl:flex-wrap xl:mx-14">
+      <div class="line-black-6/12 line-absolute xl:line-static xl:line-both-6/12 xl:flex xl:flex-wrap xl:mx-14">
         <div class="xl:w-6/12 xl:relative xl:mt-12">
           <!-- image -->
-          {{ partial "list_image" (dict "bg" "black" "src" "https://unsplash.it/500/500" "alt" "test image" ) }}
+          {{ partial "list_image" (dict "bg" "black" "src" "https://unsplash.it/id/413/500/500" "alt" "test image" ) }}
           <!-- {{ partial "list_image" (dict "bg" "black" "src" "https://unsplash.it/id/120/500/500" "alt" "test image" ) }} -->
         </div>
         <div class="xl:w-6/12 xl:pl-14">
@@ -86,10 +95,41 @@
             consectetur adipisicing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua.
           </p>
-          {{ $cta := (dict "bg" "white" "link" "#" "text" "This is how I started") }}
+          {{ $cta := (dict "bg" "white" "link" "/test" "text" "This is how I started") }}
           {{ partial "cta_link" $cta }}
         </div>
       </div>
     </div>
   </section>
+{{ end }}
+
+{{ define "footer" }}
+<footer class="px-6 xl:px-20 bg-black-main xl:bg-transparent text-white-main xl:line-both-6/12 xl:line-absolute">
+  <div class="max-w-screen-sm xl:max-w-screen-xxl mx-auto">
+    <div class="xl:flex xl:items-center xl:mx-14 pt-12 pb-14 xl:py-14">
+      <div
+        class="flex justify-between xl:justify-start w-40 mx-auto xl:pt-0 xl:pl-14 xl:w-6/12 xl:order-2 xl:text-black-main">
+        {{ $instagram := (dict "link" "https://instagram.com/brunoroemers/" "label" "Instagram" "icon" "brands/instagram.svg") }}
+        {{ partial "footer_social_link" $instagram }}
+
+        {{ $linkedin := (dict "link" "https://linkedin.com/in/bruno-roemers" "label" "LinkedIn" "icon" "brands/linkedin.svg") }}
+        {{ partial "footer_social_link" $linkedin }}
+
+        {{ $twitter := (dict "link" "https://twitter.com/BrunoRoemers" "label" "Twitter" "icon" "brands/twitter.svg") }}
+        {{ partial "footer_social_link" $twitter }}
+      </div>
+      <div class="xl:w-6/12 xl:order-1 xl:pr-14">
+        <!-- CTA FOOTER -->
+        <button type="button"
+          class="flex justify-between items-center w-full text-red-cta-on-black mt-8 xl:mt-0 border-solid border-b border-red-icon-on-black"
+          data-inactive>
+          <span class="">Amazing story, keep me in the loop!</span>
+          <span class="w-icon mt-1 text-red-icon-on-black">
+            {{ partial "icon" (dict "icon" "solid/pencil-alt.svg") }}
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</footer>
 {{ end }}
