@@ -1,0 +1,28 @@
+@responsive {
+    .filter-none::before {
+        display: none;
+    }
+
+    .filter-white::before,
+    .filter-black::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+
+    .filter-white::before {
+        background: theme('backgroundColors.white-filter');
+    }
+
+    .filter-black::before {
+        background: theme('backgroundColors.black-filter');
+    }
+
+    .filter-header::before {
+        display: block; /* hack: override filter-none */
+        background: theme('backgroundColors.header-filter');
+    }
+}

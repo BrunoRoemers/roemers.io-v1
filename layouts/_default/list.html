@@ -1,14 +1,19 @@
 {{ define "main" }}
-  <section class="px-20 bg-header">
-    <div class="mx-auto max-w-screen-xl pt-32 pb-22">
-      <h1 class="font-heading text-heading text-white-main w-6/12 leading-tight">
+  <header class="px-6 xl:px-20 relative">
+    <div class="max-w-screen-sm xl:max-w-screen-xxl mx-auto pt-24 pb-20 xl:pb-32">
+      <h1 class="font-heading text-5xl md:text-heading-md xl:text-heading xl:text-white-main leading-tight text-center xl:text-left xl:w-6/12">
         Hi I'm Bruno
       </h1>
-      <div class="flex flex-wrap line-split px-14">
-        <div class="w-6/12 text-white-main mt-12">
+      <!-- line -->
+      <div class="line-black line-absolute xl:line-static xl:line-both xl:flex xl:flex-wrap xl:mx-14">
+        <div class="xl:w-6/12 xl:mt-12">
+          <!-- image -->
+          {{ $divClass := "xl:pr-remove xl:right-auto xl:w-6/12 xl:filter-header" }}
+          {{ $imgClass := "object-left xl:shadow-remove" }}
+          {{ partial "list_image" (dict "bg" "black" "src" "images/header-bruno.jpg" "alt" "test image" "divClass" $divClass "imgClass" $imgClass ) }}
         </div>
-        <div class="w-6/12 pl-14 mt-12">
-          <p class="text-justify -mr-14">
+        <div class="xl:w-6/12 xl:pl-14">
+          <p class="text-justify pt-12 xl:-mr-14">
             <span class="small-caps">
               I built this page to challenge myself.
             </span>
@@ -26,15 +31,19 @@
         </div>
       </div>
     </div>
-  </section>
-  <section class="px-20">
-    <div class="mx-auto max-w-screen-xl mb-22">
-      <h1 class="font-heading text-heading text-right text-black-main ml-6/12 w-6/12 leading-tight">
+  </header>
+
+
+
+  <section class="px-6 xl:px-20 relative text-white-main">
+    <div class="max-w-screen-sm xl:max-w-screen-xxl mx-auto pt-15 xl:pt-0 pb-20 xl:pb-32">
+      <h1 class="font-heading text-5xl md:text-heading-md xl:text-heading xl:text-black-main leading-tight text-center xl:text-right pb-4px">
         Card Game
       </h1>
-      <div class="flex flex-wrap line-split px-14">
-        <div class="w-6/12 text-white-main pr-14 mt-12">
-          <p class="text-justify -ml-14">
+      <!-- line -->
+      <div class="line-white line-absolute xl:line-static xl:line-both xl:flex xl:flex-wrap xl:mx-14">
+        <div class="xl:w-6/12 xl:pr-14">
+          <p class="text-justify mt-12 xl:mt-12 xl:-ml-14">
             Lorem ipsum dolor sit amet, consectetur adipisicing
             elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -44,25 +53,31 @@
           {{ $cta := (dict "bg" "black" "link" "#" "text" "This trick balanced the design") }}
           {{ partial "cta_link" $cta }}
         </div>
-        <div class="w-6/12 mt-12 relative">
-                    {{ partial "list_image" (dict "bg" "white" "src" "https://unsplash.it/500/500" "alt" "test image" ) }}
-                    <!-- {{ partial "list_image" (dict "bg" "white" "src" "https://unsplash.it/id/130/500/500" "alt" "test image" ) }} -->
+        <div class="xl:w-6/12 xl:relative xl:mt-12">
+          <!-- image -->
+          {{ partial "list_image" (dict "bg" "white" "src" "https://unsplash.it/500/500" "alt" "test image" ) }}
+          <!-- {{ partial "list_image" (dict "bg" "white" "src" "https://unsplash.it/id/130/500/500" "alt" "test image" ) }} -->
         </div>
       </div>
     </div>
   </section>
-  <section class="px-20">
-    <div class="mx-auto max-w-screen-xl mb-22">
-      <h1 class="font-heading text-heading text-white-main w-6/12 leading-tight">
+
+
+
+  <section class="px-6 xl:px-20 relative">
+    <div class="max-w-screen-sm xl:max-w-screen-xxl mx-auto pt-15 xl:pt-0 pb-20 xl:pb-32">
+      <h1 class="font-heading text-5xl md:text-heading-md xl:text-heading xl:text-white-main leading-tight text-center xl:text-left">
         Roemers.io
       </h1>
-      <div class="flex flex-wrap line-split px-14">
-        <div class="w-6/12 text-white-main mt-12 relative">
-                    {{ partial "list_image" (dict "bg" "black" "src" "https://unsplash.it/500/500" "alt" "test image" ) }}
-                    <!-- {{ partial "list_image" (dict "bg" "black" "src" "https://unsplash.it/id/120/500/500" "alt" "test image" ) }} -->
+      <!-- line -->
+      <div class="line-black line-absolute xl:line-static xl:line-both xl:flex xl:flex-wrap xl:mx-14">
+        <div class="xl:w-6/12 xl:relative xl:mt-12">
+          <!-- image -->
+          {{ partial "list_image" (dict "bg" "black" "src" "https://unsplash.it/500/500" "alt" "test image" ) }}
+          <!-- {{ partial "list_image" (dict "bg" "black" "src" "https://unsplash.it/id/120/500/500" "alt" "test image" ) }} -->
         </div>
-        <div class="w-6/12 pl-14 mt-12">
-          <p class="text-justify -mr-14">
+        <div class="xl:w-6/12 xl:pl-14">
+          <p class="text-justify mt-12 xl:mt-12 xl:-mr-14">
             Lorem ipsum dolor sit amet, consectetur adipisicing
             elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Ut enim ad minim veniam, quis

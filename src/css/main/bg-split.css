@@ -1,0 +1,11 @@
+@responsive {
+    .bg-split {
+        background: linear-gradient(
+            90deg,
+            theme('colors.black-main'),
+            theme('colors.black-main') 50%,
+            theme('colors.white-main') 50%,
+            theme('colors.white-main') 100%
+        );
+    }
+}

@@ -12,9 +12,9 @@
 
 /* UTILITIES */
 @import "tailwindcss/utilities";
-@import "main/fontawesome.css";
-@import "main/cta.css";
-@import "main/split.css";
+@import "main/bg-split.css";
+@import "main/line.css";
+@import "main/filter.css";
 
 @responsive {
   .small-caps {

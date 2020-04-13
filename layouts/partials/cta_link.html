@@ -5,18 +5,23 @@
   .text
 */}}
 
+{{ $linkCommon := "hover:no-underline focus:no-underline flex justify-between items-center w-full mt-12 border-solid border-b" }}
+
+{{ $textCommon := "" }}
+{{ $iconCommon := "w-icon mt-1 mx-2px" }}
+
 {{ if eq .bg "black"  }}
-<a href="{{ .link }}" class="no-default cta cta-on-black mt-12">
-  {{ .text }}
-  <div class="float-right mt-3px mr-2px">
-    <span aria-hidden="true" class="fa fa-link fa-cta-on-black"></span>
-  </div>
+<a href="{{ .link }}" class="{{ $linkCommon }} text-red-cta-on-black border-red-cta-on-black">
+  <span class="{{ $textCommon }} order-2">{{ .text }}</span>
+  <span class="{{ $iconCommon }} order-1 text-red-icon-on-black">
+    {{ partial "icon" (dict "icon" "solid/link.svg" )}}
+  </span>
 </a>
 {{ else if eq .bg "white"}}
-<a href="{{ .link }}" class="no-default cta cta-on-white mt-12">
-  {{ .text }}
-  <div class="float-right mt-3px mr-2px">
-    <span aria-hidden="true" class="fa fa-link fa-cta-on-white"></span>
-  </div>
+<a href="{{ .link }}" class="{{ $linkCommon }} text-red-cta-on-white border-red-cta-on-white">
+  <span class="{{ $textCommon }}">{{ .text }}</span>
+  <span class="{{ $iconCommon }} text-red-icon-on-white">
+    {{ partial "icon" (dict "icon" "solid/link.svg" )}}
+  </span>
 </a>
 {{ end }}

@@ -1,0 +1,60 @@
+@responsive {    
+    .line-black::before,
+    .line-white::before,
+    .line-both::before {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 100%; /* do not collapse if parent is flex */
+    }
+
+    .line-black::before {
+        background: linear-gradient(
+            90deg,
+            transparent,
+            transparent 50%,
+            theme('colors.black-main') 50%,
+            theme('colors.black-main') 100%
+        );
+    }
+
+    .line-white::before {
+        background: linear-gradient(
+            90deg,
+            theme('colors.white-main'),
+            theme('colors.white-main') 50%,
+            transparent 50%,
+            transparent 100%
+        );
+    }
+
+    .line-both::before {
+        background: linear-gradient(
+            90deg,
+            theme('colors.white-main'),
+            theme('colors.white-main') 50%,
+            theme('colors.black-main') 50%,
+            theme('colors.black-main') 100%
+        );
+    }
+
+    .line-absolute {
+        padding-top: 3px; /* ::before outside normal flow, compensate height  */
+    }
+
+    .line-absolute::before {
+        position: absolute;
+        margin-top: -3px; /* position line on padding of parent */
+        left: 0;
+        right: 0;
+    }
+
+    .line-static {
+        padding-top: 0; /* reset .line-absolute  */
+    }
+
+    .line-static::before {
+        position: static;
+        margin-top: auto; /* reset .line-absolute */
+    }
+}

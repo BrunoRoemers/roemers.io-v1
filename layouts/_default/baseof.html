@@ -2,6 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>{{if ne .Page.Title .Site.Title }}{{ .Page.Title }} - {{ end }}{{ .Site.Title }}</title>
 
@@ -13,12 +15,12 @@
     {{ end }}
 
     {{ with .Site.Data.webpack.main.js }}
-      <script async src="{{ . }}" charset="utf-8"></script>
+      <script defer src="{{ . }}" charset="utf-8"></script>
     {{ end }}
 
     {{ template "_internal/google_analytics_async.html" . }}
   </head>
-  <body class="font-body bg-split">
+  <body class="font-body text-xl fill-current xl:bg-split">
     {{ block "main" . }}{{ end }}
 
     {{ block "footer" . }}

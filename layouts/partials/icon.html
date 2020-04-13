@@ -1,0 +1,6 @@
+{{/*
+    CONTEXT
+    .icon        
+*/}}
+{{ $path := path.Join "node_modules/@fortawesome/fontawesome-free/svgs/" .icon }}
+{{ readFile $path | safeHTML }}

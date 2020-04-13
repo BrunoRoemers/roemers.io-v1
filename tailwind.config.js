@@ -1,24 +1,78 @@
 module.exports = {
   theme: {
+    // OVERRIDE
     fontFamily: {
       heading: ['quicksand', 'century-gothic', 'sans-serif'],
       body: ['raleway', 'sans-serif'],
     },
+    screens: {
+      'sm': '640px',
+      'md': '768px',
+      // 'lg': '1024px',
+      'xl': '1280px',
+      'xxl': '1440px',
+    },
+
+    // EXTEND
     extend: {
+      fontSize: {
+        'heading-md': '3.5rem',
+        'heading': '4.7rem',
+      },
       colors: {
+        'inherit': 'inherit',
         'black-main': '#22252d',
         'white-main': '#ffffff',
         'blue-main': '#0e34a0',
-        'cta-on-white': '#ea1020',
-        'cta-on-black': '#ef626c',
+        'red-cta-on-white': '#ea1020',
+        'red-icon-on-white': '#f13c4a',
+        'red-cta-on-black': '#ef626c',
+        'red-icon-on-black': '#e8505b',
+      },
+      backgroundColors: {
+        'black-filter': 'rgba(34, 37, 45, 0.90)',
+        'white-filter': 'rgba(255, 255, 255, 0.90)',
+        'header-filter': 'linear-gradient(0deg, #22252D 0%, rgba(34, 37, 45, 0.9) 62.14%)',
       },
       boxShadow: {
+        'remove': 'none !important',
         'on-white': '1px 1px 12px rgba(34, 37, 45, 0.2)',
-        'on-black': '-1px 1px 12px rgba(0, 0, 0, 0.25)',
+        'on-black': '-1px 1px 12px rgba(0, 0, 0, 0.30)',
+      },
+      width: {
+        'icon': '0.9rem',
       },
       spacing: {
         '14': '3.5rem',
+        '15': '3.75rem',
         '22': '5.5rem',
+      },
+      zIndex: {
+        '-1': '-1',
+      },
+      padding: {
+        'remove': '0 !important',
+        '-1px': '-1px',
+        '-2px': '-2px',
+        '-3px': '-3px',
+        '-4px': '-4px',
+        '-5px': '-5px',
+        '-6px': '-6px',
+        '-7px': '-7px',
+        '-8px': '-8px',
+        '-9px': '-9px',
+        '-10px': '-10px',
+        '1px': '1px',
+        '2px': '2px',
+        '3px': '3px',
+        '4px': '4px',
+        '5px': '5px',
+        '6px': '6px',
+        '7px': '7px',
+        '8px': '8px',
+        '9px': '9px',
+        '10px': '10px',
+        '6/12': '50%',
       },
       margin: {
         '-1px': '-1px',
@@ -43,9 +97,6 @@ module.exports = {
         '10px': '10px',
         '6/12': '50%',
       },
-      fontSize: {
-        'heading': '4.7rem',
-      }
     },
   },
   variants: {},

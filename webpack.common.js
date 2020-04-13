@@ -37,27 +37,10 @@ module.exports = {
         test: /src\/images\/.+\.(svg|png|jpg|gif)$/,
         loader: 'file-loader',
         options: {
-          name: '[path]/[name].[ext]',
+          name: '[path][name].[ext]',
           context: 'src', // [path] in name is relative to this folder
           publicPath: '/',
         },
-      },
-      {
-        // fontawesome icons
-        test: /fontawesome-free\/.+\.svg$/i,
-        use: [
-          {
-            loader: 'svg-url-loader',
-            options: {
-              limit: 2048, // 2kb
-              fallback: 'file-loader',
-
-              // options for fallback
-              name: 'icons/[name].[ext]',
-              publicPath: '/',
-            },
-          },
-        ],
       },
     ],
   },

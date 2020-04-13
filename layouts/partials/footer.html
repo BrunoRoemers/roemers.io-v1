@@ -1,17 +1,19 @@
-<footer class="line-split mt-32">
-  <div class="px-20 py-14 mx-auto max-w-screen-xl flex">
-    <div class="w-6/12 px-14 text-white-main">
-      {{ partial "cta_footer" . }}
-    </div>
-    <div class="w-6/12 px-14">
-      {{ $instagram := (dict "link" "https://instagram.com/brunoroemers/" "label" "Instagram" "icon" "fa-instagram") }}
-      {{ partial "footer_social_link" $instagram }}
-
-      {{ $linkedin := (dict "link" "https://linkedin.com/in/bruno-roemers" "label" "LinkedIn" "icon" "fa-linkedin") }}
-      {{ partial "footer_social_link" $linkedin }}
-
-      {{ $twitter := (dict "link" "https://twitter.com/BrunoRoemers" "label" "Twitter" "icon" "fa-twitter") }}
-      {{ partial "footer_social_link" $twitter }}
+<footer class="px-6 xl:px-20 bg-black-main xl:bg-transparent text-white-main xl:line-both xl:line-absolute">
+  <div class="max-w-screen-sm xl:max-w-screen-xxl mx-auto">
+    <div class="xl:flex xl:items-center xl:mx-14 pt-12 pb-14 xl:py-14">
+      <div class="flex justify-between xl:justify-start w-40 mx-auto xl:pt-0 xl:pl-14 xl:w-6/12 xl:order-2 xl:text-black-main">
+        {{ $instagram := (dict "link" "https://instagram.com/brunoroemers/" "label" "Instagram" "icon" "brands/instagram.svg") }}
+        {{ partial "footer_social_link" $instagram }}
+  
+        {{ $linkedin := (dict "link" "https://linkedin.com/in/bruno-roemers" "label" "LinkedIn" "icon" "brands/linkedin.svg") }}
+        {{ partial "footer_social_link" $linkedin }}
+  
+        {{ $twitter := (dict "link" "https://twitter.com/BrunoRoemers" "label" "Twitter" "icon" "brands/twitter.svg") }}
+        {{ partial "footer_social_link" $twitter }}
+      </div>
+      <div class="xl:w-6/12 xl:order-1 xl:pr-14">
+        {{ partial "cta_footer" . }}
+      </div>
     </div>
   </div>
 </footer>

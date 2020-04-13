@@ -1,6 +1,6 @@
-<button type="button" class="cta cta-on-white mt-12">
-  Wish me luck!
-  <div class="float-right mt-3px  mr-2px">
-    <span aria-hidden="true" class="fa fa-pencil fa-cta-on-white"></span>
-  </div>
+<button type="button" class="flex justify-between items-center w-full text-red-cta-on-white mt-12  border-solid border-b border-red-icon-on-white">
+  <span class="">Wish me luck!</span>
+  <span class="w-icon mt-1 text-red-icon-on-white">
+    {{ partial "icon" (dict "icon" "solid/pencil-alt.svg") }}
+  </span>
 </button>
