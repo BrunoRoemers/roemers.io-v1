@@ -9,7 +9,11 @@
   rel="noopener noreferrer"
   href="{{ .link }}"
   aria-label="{{ .label }}"
-  class="text-inherit hover:text-red-icon-on-black focus:text-red-icon-on-black xl:hover:text-red-icon-on-white xl:focus:text-red-icon-on-white w-8 xl:mr-8"
+  class="
+    text-inherit focus:text-red-icon-on-black w-8 xl:mr-8
+    hover:text-red-icon-on-black xl:hover:text-red-icon-on-white
+    outline-none xl:focus:text-red-icon-on-white
+  "
 >
   {{ partial "icon" (dict "icon" .icon) }}
 </a>

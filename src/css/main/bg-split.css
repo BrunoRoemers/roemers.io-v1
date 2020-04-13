@@ -1,5 +1,5 @@
 @responsive {
-    .bg-split {
+    .bg-split-6\/12 {
         background: linear-gradient(
             90deg,
             theme('colors.black-main'),
@@ -7,5 +7,16 @@
             theme('colors.white-main') 50%,
             theme('colors.white-main') 100%
         );
+    }
+
+    .bg-black-end-right::before {
+        content: '';
+        position: absolute;
+        top: -999999px;
+        right: 0;
+        bottom: 0; /* cannot over extend down, because that requires overflow: hidden, which on it's turn disables position: sticky... */
+        left: -999999px;
+        background: theme('colors.black-main');
+        z-index: -1;
     }
 }

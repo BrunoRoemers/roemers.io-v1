@@ -20,11 +20,10 @@
 
     {{ template "_internal/google_analytics_async.html" . }}
   </head>
-  <body class="font-body text-xl fill-current xl:bg-split">
+  {{ $class := cond .IsHome "xl:bg-split-6/12" "" }}
+  <body class="font-body text-xl fill-current {{ $class }}">
     {{ block "main" . }}{{ end }}
 
-    {{ block "footer" . }}
-      {{ partial "footer" . }}
-    {{ end }}
+    {{ block "footer" . }}{{ end }}
   </body>
 </html>

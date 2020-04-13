@@ -1,14 +1,15 @@
 @responsive {    
-    .line-black::before,
-    .line-white::before,
-    .line-both::before {
+    .line-black-6\/12::before,
+    .line-white-6\/12::before,
+    .line-both-6\/12::before,
+    .line-both-4\/12::before {
         content: '';
         display: block;
         height: 3px;
         width: 100%; /* do not collapse if parent is flex */
     }
 
-    .line-black::before {
+    .line-black-6\/12::before {
         background: linear-gradient(
             90deg,
             transparent,
@@ -18,7 +19,7 @@
         );
     }
 
-    .line-white::before {
+    .line-white-6\/12::before {
         background: linear-gradient(
             90deg,
             theme('colors.white-main'),
@@ -28,12 +29,22 @@
         );
     }
 
-    .line-both::before {
+    .line-both-6\/12::before {
         background: linear-gradient(
             90deg,
             theme('colors.white-main'),
             theme('colors.white-main') 50%,
             theme('colors.black-main') 50%,
+            theme('colors.black-main') 100%
+        );
+    }
+
+    .line-both-4\/12::before {
+        background: linear-gradient(
+            90deg,
+            theme('colors.white-main'),
+            theme('colors.white-main') 33.333333%,
+            theme('colors.black-main') 33.333333%,
             theme('colors.black-main') 100%
         );
     }
