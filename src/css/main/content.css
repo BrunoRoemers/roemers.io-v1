@@ -1,0 +1,30 @@
+.content {
+  @apply pt-6;
+}
+
+.content h2 {
+  @apply pt-12 text-4xl leading-tight;
+}
+
+.content > h2:first-child {
+  @apply pt-4;
+}
+
+.content h3 {
+  @apply pt-12 text-3xl leading-tight;
+}
+
+.content p {
+  @apply pt-6;
+}
+
+.content img {
+  @apply w-full mt-6 shadow-on-white;
+}
+
+
+@screen xl {
+  .content p {
+    @apply -mr-14;
+  }
+}
