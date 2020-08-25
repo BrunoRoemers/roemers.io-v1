@@ -1,0 +1,23 @@
+/* table of contents */
+.toc ul {
+  counter-reset: toc;
+}
+
+.toc a {
+  @apply block text-white-main pb-4 outline-none;
+}
+
+.toc a::before {
+  counter-increment: toc;
+  content: counters(toc, ".") ". ";
+  position: absolute;
+  left: 0;
+}
+
+.toc a:hover {
+  @apply no-underline text-red-cta-on-black;
+}
+
+.toc a:focus {
+  @apply no-underline text-red-cta-on-black
+}

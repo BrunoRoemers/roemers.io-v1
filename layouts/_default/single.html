@@ -18,7 +18,10 @@
                 </a>
                 <!-- publish date -->
                 <div class="xl:pr-14">
-                  <span class="sr-only">Published on</span> <time datetime="2020-04-13">April 13, 2020</time>
+                  <span class="sr-only">Published on</span>
+                  <time datetime="{{ .Date.Format "2006-01-02" }}">
+                    {{ .Date.Format "Jan 2, 2006" }}
+                  </time>
                 </div>
               </div>
             </div>
@@ -28,7 +31,7 @@
           <div class="px-6 xl:px-0 xl:w-8/12">
             <div class="max-w-screen-sm xl:max-w-none mx-auto">
               <h1 class="font-heading text-5xl md:text-heading-md xl:text-heading leading-tight text-center xl:text-right pt-24 xl:pt-0 xl:-mr-14">
-                Roemers.io
+                {{ .Title }}
               </h1>
             </div>
           </div>
@@ -39,89 +42,17 @@
 
     <div class="px-6 xl:px-20">
       <div class="max-w-screen-sm xl:max-w-screen-xxl mx-auto">
-        <!-- SIDEBAR -->
         <div class="line-black-6/12 xl:line-both-4/12 line-absolute xl:line-static xl:flex xl:flex-wrap xl:mx-14">
+          <!-- SIDEBAR -->
           <div class="hidden xl:block text-white-main text-right xl:w-4/12 xl:pr-14 xl:relative xl:bg-black-end-right">
-            <nav class="sticky top-0 xl:pt-12">
+            <aside class="toc sticky top-0 xl:pt-12">
               <h2 class="sr-only">Jump to topic</h2>
-              <ul>
-                <li>
-                  <a href="#" class="
-                    block text-white-main pb-4
-                    hover:no-underline hover:text-red-cta-on-black
-                    focus:no-underline focus:text-red-cta-on-black outline-none
-                  " data-inactive>
-                    It started with a great idea
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="
-                    block text-white-main pb-4
-                    hover:no-underline hover:text-red-cta-on-black
-                    focus:no-underline focus:text-red-cta-on-black outline-none
-                  " data-inactive>
-                    Setting up the build tools
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="
-                    block text-white-main pb-4
-                    hover:no-underline hover:text-red-cta-on-black
-                    focus:no-underline focus:text-red-cta-on-black outline-none
-                  " data-inactive>
-                    Scaffolding the layout
-                  </a>
-                </li>
-              </ul>
-            </nav>
+              {{ .TableOfContents }}
+            </aside>
           </div>
           <!-- ARTICLE BODY -->
-          <div class="xl:w-8/12 xl:pl-14 text-justify">
-            <p class="pt-12 xl:-mr-14">
-              Following passage is a translation of the original lorem ipsum text;
-              On the other hand, we denounce with righteous indignation
-              and dislike men who are so beguiled and demoralized by the
-              charms of pleasure of the moment, so blinded by desire,
-              that they cannot foresee the pain and trouble that are bound to
-              ensue; and equal blame belongs to those who fail in
-              their duty through weakness of will, which is the same as
-              saying through shrinking from toil and pain.
-            </p>
-            <img src="https://unsplash.it/id/413/500/300" alt="test image" class="w-full mt-5 shadow-on-white">
-            <p class="pt-6 xl:-mr-14">
-              These cases are perfectly simple and easy to distinguish.
-              In a free hour, when our power of choice is untrammelled
-              and when nothing prevents our being able to do what we
-              like best, every pleasure is to be welcomed and every pain
-              avoided. But in certain circumstances and owing to the
-              claims of duty or the obligations of business it will
-              frequently occur that pleasures have to be repudiated
-              and annoyances accepted. The wise man therefore
-              always holds in these matters to this principle of
-              selection: he rejects pleasures to secure other greater
-              pleasures, or else he endures pains to avoid worse pains.
-            </p>
-            <h2 class="pt-12 text-4xl leading-tight">It started with a great idea</h2>
-            <p class="pt-6 xl:-mr-14">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Accusamus doloribus aspernatur, ullam consequuntur nesciunt
-              quibusdam esse saepe sunt atque enim? Ea minima magni
-              aspernatur, quia blanditiis animi harum quis consequuntur.
-            </p>
-            <h3 class="pt-12 text-3xl leading-tight">Brainstorming</h3>
-            <p class="pt-6 xl:-mr-14">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Accusamus doloribus aspernatur, ullam consequuntur nesciunt
-              quibusdam esse saepe sunt atque enim? Ea minima magni
-              aspernatur, quia blanditiis animi harum quis consequuntur.
-            </p>
-            <p class="pt-6 xl:-mr-14">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Accusamus doloribus aspernatur, ullam consequuntur nesciunt
-              quibusdam esse saepe sunt atque enim? Ea minima magni
-              aspernatur, quia blanditiis animi harum quis consequuntur.
-            </p>
-
+          <div class="content xl:w-8/12 xl:pl-14 text-justify">
+            {{ .Content }}
             <!-- ARTICLE FOOTER -->
             <footer class="py-12">
               <!-- home button footer -->
@@ -136,7 +67,10 @@
                 </a>
                 <!-- publish date footer -->
                 <div>
-                  <span class="sr-only">Published on</span> <time datetime="2020-04-13">April 13, 2020</time>
+                  <span class="sr-only">Published on</span> 
+                  <time datetime="{{ .Date.Format "2006-01-02" }}">
+                    {{ .Date.Format "Jan 2, 2006" }}
+                  </time>
                 </div>
               </div>
             </footer>
