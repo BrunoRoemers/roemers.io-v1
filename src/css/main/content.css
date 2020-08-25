@@ -24,6 +24,24 @@
 }
 
 
+
+
+.content ul {
+  @apply pt-6;
+}
+
+.content li {
+  @apply pl-4;
+}
+
+.content li::before {
+  content: '-';
+  @apply inline-block -ml-4 w-4;
+}
+
+
+
+
 @screen xl {
   .content p {
     @apply -mr-14;
