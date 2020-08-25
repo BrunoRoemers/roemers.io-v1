@@ -1,4 +1,6 @@
+/*! purgecss start ignore */
 @import "tailwindcss/base";
+/*! purgecss end ignore */
 
 a {
   @apply text-blue-main;
