@@ -7,9 +7,11 @@
     .alt
     .divClass
     .imgClass
+    .paddingTop
 */}}
 {{ $divClass := cond (eq .bg "white") "filter-black xl:pl-14" "filter-white xl:pr-14" }}
 {{ $imgClass := cond (eq .bg "white") "xl:shadow-on-white" "xl:shadow-on-black" }}
-<div class="absolute top-0 right-0 bottom-0 left-0 -z-1 xl:pt-2 {{ $divClass }} xl:filter-none {{ with .divClass }}{{ . }}{{ end }}">
+{{ $paddingClass := cond (eq .paddingTop false) "" "xl:pt-2"}}
+<div class="absolute top-0 right-0 bottom-0 left-0 -z-1 {{$paddingClass}} {{ $divClass }} xl:filter-none {{ with .divClass }}{{ . }}{{ end }}">
     <img class="object-cover w-full h-full {{ $imgClass }} {{ with .imgClass }}{{ . }}{{ end }}" src="{{ .src }}" alt="{{ .alt }}">
 </div>
