@@ -1,3 +1,4 @@
+/* purgecss start ignore */
 .content {
   @apply pt-6;
 }
@@ -28,3 +29,4 @@
     @apply -mr-14;
   }
 }
+/* purgecss end ignore */

@@ -1,6 +1,4 @@
-/* table of contents */
-
-/* purgecss ignore */
+/* purgecss start ignore */
 .toc ul {
   counter-reset: toc;
 }
@@ -21,5 +19,6 @@
 }
 
 .toc a:focus {
-  @apply no-underline text-red-cta-on-black
+  @apply no-underline text-red-cta-on-black;
 }
+/* purgecss end ignore */
